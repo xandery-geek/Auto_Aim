@@ -1,0 +1,1272 @@
+cscope 15 $HOME/Programe/opencv/Auto_aim/src -q 0000000125 0000006469
+	@Color_Capture.cpp
+
+1 
+	~"CŞÜ_C­tu».h
+"
+
+2 
+	~"·¿m‘”.h
+"
+
+24 
+	$HSV_v®ue
+(
+cŞÜ
+)
+
+26 
+hsv_p
+->
+low_H
+ = 
+HSV_bË
+[
+cŞÜ
+][0] - 
+COLOR_RANGE_H
+;
+
+27 
+hsv_p
+->
+high_H
+ = 
+HSV_bË
+[
+cŞÜ
+][0] + 
+COLOR_RANGE_H
+;
+
+28 
+hsv_p
+->
+low_S
+ = 
+HSV_bË
+[
+cŞÜ
+][1] - 
+COLOR_RANGE_SV
+;
+
+29 
+hsv_p
+->
+high_S
+ = 
+HSV_bË
+[
+cŞÜ
+][1] + 
+COLOR_RANGE_SV
+;
+
+30 
+hsv_p
+->
+low_V
+ = 
+HSV_bË
+[
+cŞÜ
+][2] - 
+COLOR_RANGE_SV
+;
+
+31 
+hsv_p
+->
+high_V
+ = 
+HSV_bË
+[
+cŞÜ
+][2] + 
+COLOR_RANGE_SV
+;
+
+33 ià(
+hsv_p
+->
+low_H
+ < 0)
+
+34 
+hsv_p
+->
+low_H
+ = 0;
+
+35 ià(
+hsv_p
+->
+high_H
+ > 180)
+
+36 
+hsv_p
+->
+high_H
+ = 180;
+
+37 ià(
+hsv_p
+->
+low_S
+ < 0)
+
+38 
+hsv_p
+->
+low_S
+ = 0;
+
+39 ià(
+hsv_p
+->
+high_S
+ > 255)
+
+40 
+hsv_p
+->
+high_S
+ = 255;
+
+41 ià(
+hsv_p
+->
+low_V
+ < 0)
+
+42 
+hsv_p
+->
+low_V
+ = 0;
+
+43 ià(
+hsv_p
+->
+high_V
+ > 255)
+
+44 
+hsv_p
+->
+high_V
+ = 255;
+
+46 
+	}
+}
+
+49 
+	$C­tu»_CŞÜ
+(
+M©
+& 
+¤c
+, M©& 
+d¡
+)
+
+51 
+M©
+ 
+imgHSV
+;
+
+52 
+veùÜ
+<
+M©
+> 
+hsvS¶™
+;
+
+53 
+	`cvtCŞÜ
+(
+¤c
+, 
+imgHSV
+, 
+COLOR_BGR2HSV
+);
+
+56 
+	`¥l™
+(
+imgHSV
+, 
+hsvS¶™
+);
+
+57 
+	`equ®izeHi¡
+(
+hsvS¶™
+[2], hsvSplit[2]);
+
+58 
+	`m”ge
+(
+hsvS¶™
+, 
+imgHSV
+);
+
+60 
+	`šRªge
+(
+imgHSV
+, 
+	`SÿÏr
+(
+hsv_p
+->
+low_H
+, hsv_p->
+low_S
+, hsv_p->
+low_V
+),
+
+61 
+	`SÿÏr
+(
+hsv_p
+->
+high_H
+, hsv_p->
+high_S
+, hsv_p->
+high_V
+), 
+d¡
+);
+
+64 
+M©
+ 
+–em’t
+ = 
+	`g‘SŒuùuršgEËm’t
+(
+MORPH_RECT
+, 
+	`Size
+(5, 5));
+
+67 
+	`mÜphŞogyEx
+(
+d¡
+, d¡, 
+MORPH_OPEN
+, 
+–em’t
+);
+
+69 
+	`mÜphŞogyEx
+(
+d¡
+, d¡, 
+MORPH_CLOSE
+, 
+–em’t
+);
+
+70 
+	}
+}
+
+73 
+	gveùÜ
+<veùÜ<
+	gPošt
+> > 
+	$C­tu»_coutour
+(
+M©
+& 
+img
+)
+
+75 
+veùÜ
+<veùÜ<
+Pošt
+> > 
+cÚtours
+;
+
+77 ià(
+img
+.
+	`chªÃls
+() != 1)
+
+79 
+cout
+ << "Thsourû imagi nÙ‡ g¿y image" << 
+’dl
+;
+
+80 
+	`abÜt
+();
+
+84 
+	`fšdCÚtours
+(
+img
+, 
+cÚtours
+, 
+RETR_EXTERNAL
+,
+CHAIN_APPROX_SIMPLE
+);
+
+86  
+cÚtours
+;
+
+87 
+	}
+}
+
+89 
+Fšd_Bigge¡_CÚtour
+(
+veùÜ
+<veùÜ<
+Pošt
+> > 
+cÚtours
+)
+
+91 
+	gšdex
+ = 0;
+
+92 ià(
+	gcÚtours
+.
+size
+())
+
+94 
+	gi
+ = 0; i < 
+	gcÚtours
+.
+size
+() - 1; i++)
+
+96 ià(
+	gcÚtours
+[
+i
+].
+size
+() < contours[i + 1].size())
+
+98 
+	gšdex
+ = 
+i
+ + 1;
+
+102  
+	gšdex
+;
+
+109 
+Pošt
+ 
+G‘_Image_C’‹r
+(
+veùÜ
+<veùÜ<Pošt> > 
+cÚtours
+ ,
+šdex
+)
+
+111 
+Pošt
+ 
+	gûÁ”
+;
+
+112 
+	gpošt_num
+ = 0;
+
+113 
+	gpošt_num
+ = 
+cÚtours
+[
+šdex
+].
+size
+();
+
+115 
+	gveùÜ
+<
+	gPošt
+>::
+™”©Ü
+ 
+p
+;
+
+116 
+	gp
+ = 
+cÚtours
+[
+šdex
+].
+begš
+();… < 
+	gcÚtours
+[šdex].
+’d
+();…++)
+
+118 
+	gûÁ”
+.
+	gx
+ +ğ
+p
+->
+x
+;
+
+119 
+	gûÁ”
+.
+	gy
+ +ğ
+p
+->
+y
+;
+
+122 ià(
+	gpošt_num
+)
+
+124 
+	gûÁ”
+.
+	gx
+ /ğ
+pošt_num
+;
+
+125 
+	gûÁ”
+.
+	gy
+ /ğ
+pošt_num
+;
+
+129 
+	gcout
+ << "ThcÚtou¸i em±y!" << 
+	g’dl
+;
+
+130 
+abÜt
+();
+
+133  
+	gûÁ”
+;
+
+136 
+	$D¿w_šfo
+(
+M©
+& 
+img
+,
+IÅutA¼ayOfA¼ays
+ 
+cÚtours
+,
+šdex
+,
+Pošt
+ 
+pošt
+)
+
+138 
+SÿÏr
+ 
+cŞÜ
+ = 
+	`SÿÏr
+(0);
+
+139 
+	`d¿wCÚtours
+(
+img
+, 
+cÚtours
+, 
+šdex
+, 
+cŞÜ
+);
+
+140 
+	`cœşe
+(
+img
+, 
+pošt
+,4,
+cŞÜ
+,-1);
+
+141 
+	}
+}
+
+143 
+	$C®l_Back
+(,*)
+
+145 
+	`C­tu»_CŞÜ
+(
+š_video
+, 
+out_image
+);
+
+146 
+	}
+}
+
+	@Control_Motor.cpp
+
+1 
+	~"CÚŒŞ_MÙÜ.h
+"
+
+12 
+Pošt
+ 
+	$G‘_E¼Ü
+(cÚ¡ 
+M©
+& 
+img
+ ,
+Pošt
+ 
+pošt
+)
+
+14 
+Pošt
+ 
+ûÁ”
+;
+
+16 
+ûÁ”
+.
+x
+ = 
+img
+.
+rows
+/2;
+
+17 
+ûÁ”
+.
+y
+ = 
+img
+.
+cŞs
+/2;
+
+19 
+ûÁ”
+.
+x
+ -ğ
+pošt
+.x;
+
+20 
+ûÁ”
+.
+y
+ -ğ
+pošt
+.y;
+
+22  
+ûÁ”
+;
+
+23 
+	}
+}
+
+25 
+	$PID_CÚŒŞ
+(cÚ¡ 
+Pošt
+ 
+PID_”rÜ
+)
+
+27 
+Pošt
+ 
+ûÁ”_pošt_Ï¡
+;
+
+29 
+pid
+->
+d–_x
+ = 
+PID_”rÜ
+.
+x
+ - 
+ûÁ”_pošt_Ï¡
+.x;
+
+30 
+pid
+->
+š‹g¿l_x
+ +ğ
+PID_”rÜ
+.
+x
+;
+
+32 
+pid
+->
+g_x_ªgË
+ = 
+mÙÜ_P
+ * 
+PID_”rÜ
+.
+x
+ + 
+mÙÜ_I
+ *…id->
+š‹g¿l_x
+ \
+
+33 + 
+mÙÜ_D
+ * 
+pid
+->
+d–_x
+;
+
+37 
+pid
+->
+d–_y
+ = 
+PID_”rÜ
+.
+y
+ - 
+ûÁ”_pošt_Ï¡
+.y;
+
+38 
+pid
+->
+š‹g¿l_y
+ +ğ
+PID_”rÜ
+.
+y
+;
+
+40 
+pid
+->
+g_y_ªgË
+ = 
+mÙÜ_P
+ * 
+PID_”rÜ
+.
+y
+ + 
+mÙÜ_I
+ *…id->
+š‹g¿l_y
+ \
+
+41 + 
+mÙÜ_D
+ * 
+pid
+->
+d–_y
+;
+
+43 
+ûÁ”_pošt_Ï¡
+ = 
+PID_”rÜ
+;
+
+44 
+	}
+}
+
+52 
+	$Communiÿ‹_W™h_MCU
+()
+
+57 
+	}
+}
+
+63 
+	$PWM_GPIO
+()
+
+68 
+	}
+}
+
+	@Initialization .cpp
+
+1 
+	~"In™Ÿliz©iÚ.h
+"
+
+5 
+	$In™_InfÜm©iÚ
+()
+
+7 
+cout
+
+
+8 << "\n--------------------------------------------------------------------------" << 
+’dl
+
+
+9 << "ThfunÿtiÚ oàhi ´og¿m i tØfšdhobjeù which havth¥ecifiøcŞÜ" << 
+’dl
+
+
+10 << "H”¬th»Wšdow tØdi¥Ïy imagÜ infÜm©iÚ" << 
+’dl
+
+
+11 << "--------------------------------------------------------------------------" << 
+’dl
+
+
+12 << 
+’dl
+;
+
+13 
+	}
+}
+
+16 
+	$In™_Wšdows
+()
+
+18 
+	`ÇmedWšdow
+(
+Di¥Ïy_wš
+, 
+WINDOW_NORMAL
+);
+
+19 
+	`ÇmedWšdow
+(
+Image_wš
+, 
+WINDOW_NORMAL
+);
+
+20 
+	`ÇmedWšdow
+(
+CÚŒŞ_wš
+, 
+WINDOW_NORMAL
+);
+
+21 
+	}
+}
+
+33 
+	$Lßd_From_Cam”a
+(
+šdex
+)
+
+35 
+VideoC­tu»
+ 
+	`ÿ±u»
+(
+šdex
+);
+
+36 ià(!
+ÿ±u»
+.
+	`isO³Ãd
+())
+
+38 
+cout
+ << "O³Àthÿm”¨ç!\n" << 
+’dl
+;
+
+39 
+	`abÜt
+();
+
+42 
+boŞ
+ 
+	`¡İ
+(
+çl£
+);
+
+43 
+M©
+ 
+äame
+;
+
+45 
+	`ÇmedWšdow
+("Camera");
+
+46 !
+¡İ
+)
+
+48 ià(!
+ÿ±u»
+.
+	`»ad
+(
+äame
+))
+
+52 
+	`imshow
+("Cam”a", 
+äame
+);
+
+54 
+c
+ = 
+	`cvWa™Key
+(33);
+
+55 ià(
+c
+ == 27);
+
+57 
+ÿ±u»
+.
+	`»Ëa£
+();
+
+59 
+	}
+}
+
+61 
+	$In™_CÚŒŞ_B¬
+()
+
+63 
+	`ü—‹T¿ckb¬
+("H_low", 
+CÚŒŞ_wš
+, &
+hsv_p
+->
+low_H
+,180 );
+
+64 
+	`ü—‹T¿ckb¬
+("H_high", 
+CÚŒŞ_wš
+, &
+hsv_p
+->
+high_H
+, 180);
+
+65 
+	`ü—‹T¿ckb¬
+("S_low", 
+CÚŒŞ_wš
+, &
+hsv_p
+->
+low_S
+,255 );
+
+66 
+	`ü—‹T¿ckb¬
+("S_high", 
+CÚŒŞ_wš
+,&
+hsv_p
+->
+high_S
+, 255 );
+
+67 
+	`ü—‹T¿ckb¬
+("V_low", 
+CÚŒŞ_wš
+, &
+hsv_p
+->
+low_V
+, 255 );
+
+68 
+	`ü—‹T¿ckb¬
+("V_hig", 
+CÚŒŞ_wš
+, &
+hsv_p
+->
+high_V
+, 255 );
+
+69 
+	}
+}
+
+	@main.cpp
+
+1 
+	~"šşude.h
+"
+
+4 
+usšg
+ 
+Çme¥aû
+ 
+	g¡d
+;
+
+5 
+usšg
+ 
+Çme¥aû
+ 
+	gcv
+;
+
+8 
+	$maš
+()
+
+10 
+	`In™_InfÜm©iÚ
+();
+
+11 
+	`In™_Wšdows
+();
+
+12 
+	`HSV_v®ue
+(
+hsv_cŞÜ
+);
+
+14 
+šdex
+;
+
+16 
+VideoC­tu»
+ 
+	`ÿ±u»
+(0);
+
+17 ià(!
+ÿ±u»
+.
+	`isO³Ãd
+())
+
+19 
+cout
+ << "O³Àthÿm”¨ç!\n" << 
+’dl
+;
+
+23 
+boŞ
+ 
+	`¡İ
+(
+çl£
+);
+
+24 !
+¡İ
+)
+
+26 ià(!
+ÿ±u»
+.
+	`»ad
+(
+š_video
+))
+
+31 
+	`In™_CÚŒŞ_B¬
+();
+
+32 
+	`C­tu»_CŞÜ
+(
+š_video
+,
+out_image
+);
+
+33 
+img_cÚtour
+ = 
+	`C­tu»_coutour
+(
+out_image
+);
+
+34 if(
+šdex
+ = 
+	`Fšd_Bigge¡_CÚtour
+(
+img_cÚtour
+))
+
+35 
+ûÁ”_pošt
+ = 
+	`G‘_Image_C’‹r
+(
+img_cÚtour
+, 
+šdex
+);
+
+38 
+	`imshow
+(
+Di¥Ïy_wš
+, 
+š_video
+);
+
+39 
+	`D¿w_šfo
+(
+out_image
+, 
+img_cÚtour
+, 
+šdex
+, 
+ûÁ”_pošt
+);
+
+40 
+	`imshow
+(
+Image_wš
+, 
+out_image
+);
+
+43 
+c
+ = 
+	`cvWa™Key
+(33);
+
+44 ià(
+c
+ == 27);
+
+48 
+ÿ±u»
+.
+	`»Ëa£
+();
+
+49 
+	`de¡royAÎWšdows
+();
+
+51 
+	}
+}
+
+	@parameter.cpp
+
+1 
+	~"·¿m‘”.h
+"
+
+4 cÚ¡ 
+	gDi¥Ïy_wš
+[20] = "Camera Window";
+
+5 cÚ¡ 
+	gImage_wš
+[20] = "Image Window";
+
+6 cÚ¡ 
+	gCÚŒŞ_wš
+[20] = "Control Window";
+
+8 cÚ¡ 
+	gmÙÜ_P
+ = 1;
+
+9 cÚ¡ 
+	gmÙÜ_I
+ = 0;
+
+10 cÚ¡ 
+	gmÙÜ_D
+ = 0;
+
+12 
+HSV_·¿
+ 
+	ghsv_·¿
+;
+
+13 
+HSV_·¿
+ *
+	ghsv_p
+ = &
+hsv_·¿
+;
+
+14 
+HSV_CŞÜ
+ 
+	ghsv_cŞÜ
+ = 
+blue
+;
+
+16 
+M©
+ 
+	gš_video
+;
+
+17 
+M©
+ 
+	gout_image
+;
+
+19 
+	gveùÜ
+<veùÜ<
+	gPošt
+> > 
+	gimg_cÚtour
+;
+
+20 
+Pošt
+ 
+	gûÁ”_pošt
+;
+
+21 
+PTD_d©a
+ 
+	gpid_d©a
+;
+
+22 
+PTD_d©a
+ *
+	gpid
+ = &
+pid_d©a
+;
+
+25 
+	gHSV_bË
+[16][3] =
+
+	@
+1
+.
+0
+5
+79
+Color_Capture.cpp
+Control_Motor.cpp
+Initialization .cpp
+main.cpp
+parameter.cpp

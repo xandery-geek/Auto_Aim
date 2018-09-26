@@ -1,0 +1,38 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Call_Back	Color_Capture.cpp	/^void Call_Back(int ,void*)$/;"	f	language:C++	signature:(int ,void*)
+Capture_Color	Color_Capture.cpp	/^void Capture_Color(Mat& src, Mat& dst)$/;"	f	language:C++	signature:(Mat& src, Mat& dst)
+Capture_coutour	Color_Capture.cpp	/^vector<vector<Point> > Capture_coutour(Mat& img)$/;"	f	language:C++	signature:(Mat& img)
+Communicate_With_MCU	Control_Motor.cpp	/^void Communicate_With_MCU()$/;"	f	language:C++	signature:()
+Control_win	parameter.cpp	/^const char Control_win[20] = "Control Window";$/;"	v	language:C++
+Display_win	parameter.cpp	/^const char Display_win[20] = "Camera Window";		\/\/the name of all windows.$/;"	v	language:C++
+Draw_info	Color_Capture.cpp	/^void Draw_info(Mat& img,InputArrayOfArrays contours,int index,Point point)$/;"	f	language:C++	signature:(Mat& img,InputArrayOfArrays contours,int index,Point point)
+Find_Biggest_Contour	Color_Capture.cpp	/^int Find_Biggest_Contour(vector<vector<Point> > contours)$/;"	f	language:C++	signature:(vector<vector<Point> > contours)
+Get_Error	Control_Motor.cpp	/^Point Get_Error(const Mat& img ,Point point)$/;"	f	language:C++	signature:(const Mat& img ,Point point)
+Get_Image_Center	Color_Capture.cpp	/^Point Get_Image_Center(vector<vector<Point> > contours ,int index)$/;"	f	language:C++	signature:(vector<vector<Point> > contours ,int index)
+HSV_table	parameter.cpp	/^int HSV_table[16][3] =					\/\/the table of HSV value$/;"	v	language:C++
+HSV_value	Color_Capture.cpp	/^void HSV_value(int color)$/;"	f	language:C++	signature:(int color)
+Image_win	parameter.cpp	/^const char Image_win[20] = "Image Window";$/;"	v	language:C++
+Init_Control_Bar	Initialization .cpp	/^void Init_Control_Bar()$/;"	f	language:C++	signature:()
+Init_Information	Initialization .cpp	/^void Init_Information()$/;"	f	language:C++	signature:()
+Init_Windows	Initialization .cpp	/^void Init_Windows()$/;"	f	language:C++	signature:()
+Load_From_Camera	Initialization .cpp	/^int Load_From_Camera(int index)$/;"	f	language:C++	signature:(int index)
+PID_Control	Control_Motor.cpp	/^void PID_Control(const Point PID_error)$/;"	f	language:C++	signature:(const Point PID_error)
+PWM_GPIO	Control_Motor.cpp	/^void PWM_GPIO()$/;"	f	language:C++	signature:()
+center_point	parameter.cpp	/^Point center_point;						\/\/the center point of target contour.$/;"	v	language:C++
+hsv_color	parameter.cpp	/^HSV_Color hsv_color = blue;				\/\/the color of target.$/;"	v	language:C++
+hsv_p	parameter.cpp	/^HSV_para *hsv_p = &hsv_para;			\/\/the point to hsv_para$/;"	v	language:C++
+hsv_para	parameter.cpp	/^HSV_para hsv_para;						\/\/the HSV value of each color.$/;"	v	language:C++
+img_contour	parameter.cpp	/^vector<vector<Point> > img_contour;		\/\/the points on the contours.$/;"	v	language:C++
+in_video	parameter.cpp	/^Mat in_video;							\/\/the mat of source image captured by camera.$/;"	v	language:C++
+main	main.cpp	/^int main()$/;"	f	language:C++	signature:()
+motor_D	parameter.cpp	/^const float motor_D = 0;$/;"	v	language:C++
+motor_I	parameter.cpp	/^const float motor_I = 0;$/;"	v	language:C++
+motor_P	parameter.cpp	/^const float motor_P = 1;					\/\/the parameters of PID.$/;"	v	language:C++
+out_image	parameter.cpp	/^Mat out_image;							\/\/the mat of processed image. $/;"	v	language:C++
+pid	parameter.cpp	/^PTD_data *pid = &pid_data;$/;"	v	language:C++
+pid_data	parameter.cpp	/^PTD_data pid_data;$/;"	v	language:C++
